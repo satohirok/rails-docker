@@ -4,8 +4,7 @@ RUN mkdir /rails-docker
 
 WORKDIR /rails-docker
 
-ADD Gemfile /rails-docker/Gemfile
-ADD Gemfile.lock /rails-docker/Gemfile.lock
+ADD Gemfile Gemfile.lock /rails-docker/
 
 RUN gem install bundler
 RUN bundle install
